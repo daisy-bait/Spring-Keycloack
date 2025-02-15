@@ -15,7 +15,7 @@ public class DaisyController {
         return "Hello - ADMIN - in Spring Boot with Keycloak";
     }
 
-    @PreAuthorize("hasAnyRole('user_client_role_ROLE', 'admin_client_role')")
+    @PreAuthorize("hasAnyRole('user_client_role', 'admin_client_role')")
     @GetMapping("/hello-user")
     public String helloUser() {
         return "Hello - USER - in Spring Boot with Keycloak";
