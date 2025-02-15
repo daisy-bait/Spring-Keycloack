@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: daisy-keycloak
+  # Keycloak Config
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${ISSUER}
+          jwk-set-uri: ${JWKS}
+
+logging:
+  level:
+    org:
+      keycloak: DEBUG
